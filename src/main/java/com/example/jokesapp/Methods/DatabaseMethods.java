@@ -18,8 +18,27 @@ public class DatabaseMethods {
 
 
     public ArrayList<Joke> getAllJokes(JdbcTemplate jdbcTemplate) throws SQLException {
-        ArrayList<Joke> jokes = new ArrayList<>();
         String query = "SELECT * FROM joke";
+        return getJokesByQuery(query,jdbcTemplate);
+    }
+
+    public ArrayList<Joke> getGeneralJokes(JdbcTemplate jdbcTemplate) throws SQLException {
+        String query = "SELECT * FROM joke WHERE type = 'general'";
+        return getJokesByQuery(query,jdbcTemplate);
+    }
+
+    public ArrayList<Joke> getKnockKnockJokes(JdbcTemplate jdbcTemplate) throws SQLException {
+        String query = "SELECT * FROM joke WHERE type = 'knock-knock'";
+        return getJokesByQuery(query,jdbcTemplate);
+    }
+
+    public ArrayList<Joke> getProgrammingJokes(JdbcTemplate jdbcTemplate) throws SQLException {
+        String query = "SELECT * FROM joke WHERE type = 'programming'";
+        return getJokesByQuery(query,jdbcTemplate);
+    }
+
+    private ArrayList<Joke> getJokesByQuery(String query, JdbcTemplate jdbcTemplate) throws SQLException {
+        ArrayList<Joke> jokes = new ArrayList<>();
         if(jdbcTemplate.getDataSource()==null){
             System.out.println("Data Source is Null");
         }
