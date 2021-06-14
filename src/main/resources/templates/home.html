@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" onclick="onScreenClick()">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{webjars/bootstrap/5.0.1/css/bootstrap.min.css}">
@@ -31,13 +31,13 @@
 <header>
     <nav class="navbar navbar-light navbar-expand" style="background-color: #81e795;">
         <div class="container-fluid">
-            <a class="navbar-brand">Jokes Web App</a>
+            <a class="navbar-brand">Adam's Jokes Web App</a>
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/}">All Jokes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/general}" >General</a>
+                    <a class="nav-link" th:href="@{/general}">General</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{/knockknock}">Knock-Knock</a>
@@ -46,15 +46,12 @@
                     <a class="nav-link" th:href="@{/programming}">Programming</a>
                 </li>
             </ul>
-
         </div>
-
     </nav>
 </header>
-
-<div class="container-fluid" onclick="onScreenClick()">
+<div class="container-fluid">
     <div class="p-5 text-center">
-        <h1 class="mb-3">All Joke Categories</h1>
+        <h1 class="mb-3" th:text="${category}"></h1>
     </div>
     <div class="p-5 text-center">
         <script th:inline="javascript" type="application/javascript">

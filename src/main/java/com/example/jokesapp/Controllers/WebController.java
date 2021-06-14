@@ -21,6 +21,7 @@ public class WebController {
     public String home(Model model) throws SQLException {
         databaseMethods=new DatabaseMethods();
         model.addAttribute("jokes", databaseMethods.getAllJokes(jdbcTemplate));
+        model.addAttribute("category", "All Joke Categories");
         return "home";
     }
 
@@ -28,6 +29,7 @@ public class WebController {
     public String general(Model model) throws SQLException {
         databaseMethods=new DatabaseMethods();
         model.addAttribute("jokes", databaseMethods.getGeneralJokes(jdbcTemplate));
+        model.addAttribute("category", "General Jokes");
         return "home";
     }
 
@@ -35,6 +37,7 @@ public class WebController {
     public String knockknock(Model model) throws SQLException {
         databaseMethods=new DatabaseMethods();
         model.addAttribute("jokes", databaseMethods.getKnockKnockJokes(jdbcTemplate));
+        model.addAttribute("category", "Knock-Knock Jokes");
         return "home";
     }
 
@@ -42,6 +45,7 @@ public class WebController {
     public String programming(Model model) throws SQLException {
         databaseMethods=new DatabaseMethods();
         model.addAttribute("jokes", databaseMethods.getProgrammingJokes(jdbcTemplate));
+        model.addAttribute("category", "Programming Jokes");
         return "home";
     }
 
