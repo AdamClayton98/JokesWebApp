@@ -71,7 +71,7 @@ INSERT INTO joke(id,type,setup,punchline) VALUES (55,'general','Why is peter pan
 INSERT INTO joke(id,type,setup,punchline) VALUES (56,'programming','How do you check if a webpage is HTML5?','Try it out on Internet Explorer');
 INSERT INTO joke(id,type,setup,punchline) VALUES (57,'general','What do you call a cow with no legs?','Ground beef!');
 INSERT INTO joke(id,type,setup,punchline) VALUES (58,'general','I dropped a pear in my car this morning.','You should drop another one, then you would have a pair.');
-INSERT INTO joke(id,type,setup,punchline) VALUES (59,'general','Lady: How do I spread love in this cruel world?','Random Dude: [...💘]');
+INSERT INTO joke(id,type,setup,punchline) VALUES (59,'general','Lady: How do I spread love in this cruel world?','Random Dude: [...]');
 INSERT INTO joke(id,type,setup,punchline) VALUES (60,'programming','A user interface is like a joke.','If you have to explain it then it is not that good.');
 INSERT INTO joke(id,type,setup,punchline) VALUES (61,'knock-knock','Knock knock.
  Who''s there?
