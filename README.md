@@ -1,6 +1,6 @@
 ##Setup
 * Clone/download this project to your computer
-* If you don't already, download & install Docker from https://www.docker.com/products/docker-desktop
+* If you haven't already, download & install Docker from https://www.docker.com/products/docker-desktop
 * Open a command line & navigate to the JokesWebApp folder
 * Enter the command 'docker-compose up --build -d' with docker desktop open
 * Check in docker that jokesapp is there under Containers / Apps
