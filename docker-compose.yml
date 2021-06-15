@@ -7,13 +7,14 @@ services:
       - "8080:8080"
     depends_on:
       - db
+    restart: always
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/jokes?autoReconnect=true&useSSL=false
       SPRING_DATASOURCE_USERNAME: user
       SPRING_DATASOURCE_PASSWORD: password123
 
   db:
-    image: mysql:latest
+    image: mysql:8.0.19
     container_name: mysql-db
     ports:
       - "3306:3306"

@@ -9,7 +9,6 @@ import java.io.IOException;
 
 @SpringBootApplication
 public class JokesappApplication {
-    DatabaseMethods databaseMethods=new DatabaseMethods();
 
     public static void main(String[] args) throws IOException {
         SpringApplication.run(JokesappApplication.class, args);
